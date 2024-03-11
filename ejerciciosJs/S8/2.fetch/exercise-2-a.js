@@ -8,27 +8,29 @@ input$$ = document.querySelector('input');
 
 
 
-const filtarMostrar=(endPoint)=> {
+const filtarMostrar = (endPoint) => {
+    
 
     async function cargarDatos(endPoint) {
 
         const filtro = `${endPoint}?name=${input$$.value}`;
 
-        console.log(filtro)
+        console.log(filtro);
 
         const response = await fetch(filtro, { method: 'GET' });
 
         const data = await response.json();
         
-        console.log(data)
+        console.log(data);
 
     }
 
-    cargarDatos(endPoint)
+    cargarDatos(endPoint);
 }
 
 const action = () => {
-    filtarMostrar(url)
+    
+    filtarMostrar(url);
 }
 
 
